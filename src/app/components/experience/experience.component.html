@@ -1,0 +1,85 @@
+<section id="experience" class="experience section">
+  <div class="container">
+    <div class="exp-head">
+      <span class="section-tag">Experience</span>
+      <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+    </div>
+
+    <div class="exp-grid">
+      <div class="exp-left">
+        <div class="exp-item" *ngFor="let e of experiences; let last = last">
+          <div class="exp-marker">
+            <span class="dot" [class.current]="e.current"></span>
+            <span class="line" *ngIf="!last"></span>
+          </div>
+          <div class="exp-content">
+            <div class="exp-top">
+              <div>
+                <h3>{{ e.role }}</h3>
+                <p class="exp-company">{{ e.company }} · {{ e.location }}</p>
+              </div>
+              <span class="exp-period" [class.current]="e.current">{{ e.period }}</span>
+            </div>
+            <ul class="exp-bullets">
+              <li *ngFor="let b of e.bullets">{{ b }}</li>
+            </ul>
+            <div class="exp-tech">
+              <span class="exp-tag" *ngFor="let t of e.tech">{{ t }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-right">
+        <div class="flow-card">
+          <span class="flow-title">My Tech Flow</span>
+          <div class="flow-row">
+            <ng-container *ngFor="let f of flow; let i = index">
+              <div class="flow-node">
+                <span class="flow-icon" [style.background]="f.color + '22'" [style.color]="f.color" [style.borderColor]="f.color + '55'">
+                  <app-tech-icon [label]="f.label" [size]="24"></app-tech-icon>
+                </span>
+                <span class="flow-label">{{ f.label }}</span>
+              </div>
+              <span class="flow-arrow" *ngIf="i < flow.length - 1">→</span>
+            </ng-container>
+          </div>
+          <blockquote class="flow-quote">
+            "Technology is best when it brings people together and solves real problems."
+          </blockquote>
+        </div>
+
+        <div class="stats-card">
+          <div class="stat" *ngFor="let s of stats">
+            <span class="stat-value gradient-text">{{ s.value }}</span>
+            <span class="stat-label">{{ s.label }}</span>
+          </div>
+        </div>
+
+        <div class="awards-card">
+          <span class="awards-title">🏅 Awards</span>
+          <div class="award" *ngFor="let a of awards">
+            <span class="award-icon">{{ a.icon }}</span>
+            <span class="award-info">
+              <strong>{{ a.title }}</strong>
+              <span>{{ a.sub }}</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="awards-card">
+          <span class="awards-title">📜 Certifications</span>
+          <div class="award" *ngFor="let c of certifications">
+            <span class="cert-icon" [style.background]="c.color + '22'" [style.color]="c.color" [style.borderColor]="c.color + '55'">
+              <app-tech-icon [label]="c.tech" [size]="20"></app-tech-icon>
+            </span>
+            <span class="award-info">
+              <strong>{{ c.title }}</strong>
+              <span>{{ c.sub }}</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

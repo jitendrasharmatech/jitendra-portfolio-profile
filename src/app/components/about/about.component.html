@@ -1,0 +1,53 @@
+<section id="about" class="about section">
+  <div class="container about-grid">
+    <div class="about-text">
+      <span class="section-tag">About Me</span>
+      <h2 class="section-title">
+        Turning ideas into<br /><span class="gradient-text">impactful solutions</span>
+      </h2>
+
+      <p class="about-desc">
+        I'm a Senior Software Developer (SSD III) with experience in designing and developing
+        enterprise applications. I enjoy solving complex problems, building
+        scalable systems and working with modern technologies like Java, Spring
+        Boot, Angular, Microservices and AI integrations.
+      </p>
+
+      <div class="traits">
+        <div class="trait" *ngFor="let t of traits">
+          <span class="trait-icon">{{ t.icon }}</span>
+          <span>{{ t.label }}</span>
+        </div>
+      </div>
+
+      <a class="learn-more" href="#skills">
+        Learn More
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="about-visual">
+      <div class="workspace-card">
+        <div class="ws-glow"></div>
+        <div class="ws-window">
+          <div class="ws-bar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="ws-code">
+            <span class="line"><em class="k">public class</em>&nbsp;<em class="c">Developer</em> {{ '{' }}</span>
+            <span class="line indent"><em class="k">String</em> name = <em class="s">"Jitendra"</em>;</span>
+            <span class="line indent"><em class="k">String</em> role = <em class="s">"Builder"</em>;</span>
+            <span class="line indent"><em class="k">void</em>&nbsp;<em class="f">build</em>() {{ '{' }}</span>
+            <span class="line indent2"><em class="c">Better</em>.code();</span>
+            <span class="line indent">{{ '}' }}</span>
+            <span class="line">{{ '}' }}</span>
+          </div>
+        </div>
+        <span class="ws-caption">Better Code. Better Tomorrow.</span>
+      </div>
+    </div>
+  </div>
+</section>

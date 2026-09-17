@@ -1,0 +1,55 @@
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" (click)="scrollTo('home')">
+      <span class="brand-icon">&lt;/&gt;</span>
+      <span class="brand-text">Jitend<span class="gradient-text">ra</span></span>
+    </a>
+
+    <nav class="nav-links" [class.open]="menuOpen">
+      <a
+        *ngFor="let link of links"
+        (click)="scrollTo(link.id)"
+        [class.active]="active === link.id"
+        >{{ link.label }}</a
+      >
+    </nav>
+
+    <div class="nav-actions">
+      <a
+        class="btn btn-primary resume-btn"
+        href="assets/Jitendra_Sharma_Resume.pdf"
+        download="Jitendra_Sharma_Resume.pdf"
+      >
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
+        Download Resume
+      </a>
+      <button
+        class="icon-btn theme-btn"
+        (click)="toggleTheme()"
+        [attr.aria-label]="theme() === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'"
+        [attr.title]="theme() === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'"
+      >
+        <!-- Moon: shown in dark mode (click to go light) -->
+        <svg *ngIf="theme() === 'dark'" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+        <!-- Sun: shown in light mode (click to go dark) -->
+        <svg *ngIf="theme() === 'light'" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+        </svg>
+      </button>
+      <button class="icon-btn menu-btn" (click)="toggleMenu()" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

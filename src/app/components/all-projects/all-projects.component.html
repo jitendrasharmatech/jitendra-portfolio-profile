@@ -1,0 +1,43 @@
+<div class="overlay" (click)="onClose()">
+  <div class="panel" (click)="$event.stopPropagation()">
+    <header class="panel-head">
+      <div *ngIf="!isSingle">
+        <span class="section-tag">All Projects</span>
+        <h2 class="panel-title">Everything I've <span class="gradient-text">built</span></h2>
+        <p class="panel-sub">{{ projects.length }} projects across enterprise platforms, HR suites, fintech and AI integrations.</p>
+      </div>
+      <div *ngIf="isSingle && projects[0] as single">
+        <span class="section-tag">Project Details</span>
+        <h2 class="panel-title gradient-text">{{ single.title }}</h2>
+        <p class="panel-sub" *ngIf="single.company">
+          {{ single.company }}<span *ngIf="single.period"> · {{ single.period }}</span>
+        </p>
+      </div>
+      <button class="close-btn" (click)="onClose()" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </header>
+
+    <div class="panel-grid" [class.single]="isSingle">
+      <article class="full-card" *ngFor="let p of projects" [class.featured]="p.featured">
+        <div class="fc-top" *ngIf="!isSingle">
+          <h3>{{ p.title }}</h3>
+          <span class="featured-badge" *ngIf="p.featured">★ Featured</span>
+        </div>
+        <p class="fc-meta" *ngIf="!isSingle && p.company">{{ p.company }}<span *ngIf="p.period"> · {{ p.period }}</span></p>
+        <p class="fc-desc">{{ p.description }}</p>
+
+        <ul class="fc-highlights" *ngIf="p.highlights?.length">
+          <li *ngFor="let h of p.highlights">{{ h }}</li>
+        </ul>
+
+        <div class="fc-tags">
+          <span class="tag" *ngFor="let t of p.tags">{{ t }}</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>

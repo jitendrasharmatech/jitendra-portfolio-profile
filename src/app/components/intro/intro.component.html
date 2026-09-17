@@ -1,0 +1,63 @@
+<section id="home" class="hero section">
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+
+  <div class="container hero-grid">
+    <div class="hero-text reveal">
+      <span class="hello-pill">👋 Hello, I'm</span>
+
+      <h1 class="hero-name">
+        Jitendra <span class="gradient-text">Sharma</span>
+      </h1>
+      <h2 class="hero-role">Senior Software Developer <span class="role-badge">SSD III</span></h2>
+
+      <p class="hero-desc">
+        I build scalable web applications and AI-powered solutions using Java,
+        Spring Boot, Angular, Microservices and modern cloud technologies.
+      </p>
+
+      <div class="hero-cta">
+        <button class="btn btn-primary" (click)="scrollTo('projects')">
+          View My Projects
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </button>
+        <a
+          class="btn btn-outline"
+          href="assets/Jitendra_Sharma_Resume.pdf"
+          download="Jitendra_Sharma_Resume.pdf"
+        >
+          Download Resume
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="tech-row">
+        <div class="tech-item" *ngFor="let t of techs">
+          <span class="tech-chip" [style.borderColor]="t.color" [style.color]="t.color">
+            <app-tech-icon [label]="t.label" [size]="24"></app-tech-icon>
+          </span>
+          <span class="tech-label">{{ t.label }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <span class="code-note">Code.<br />Build.<br />Innovate.</span>
+      <div class="image-frame">
+        <div class="frame-border"></div>
+        <div class="profile-img">
+          <img src="assets/profile.jpg" alt="Jitendra Sharma" onerror="this.style.display='none';this.parentElement.classList.add('no-img')" />
+          <span class="img-fallback">JS</span>
+        </div>
+      </div>
+      <div class="deco-dots"></div>
+    </div>
+  </div>
+</section>

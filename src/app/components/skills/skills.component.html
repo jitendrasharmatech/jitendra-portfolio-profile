@@ -1,0 +1,20 @@
+<section id="skills" class="skills section">
+  <div class="container">
+    <div class="skills-head">
+      <span class="section-tag">Skills</span>
+      <h2 class="section-title">My <span class="gradient-text">Technical Skills</span></h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card" *ngFor="let s of skills">
+        <span class="skill-icon" [style.background]="s.color + '22'" [style.color]="s.color" [style.borderColor]="s.color + '55'">
+          <app-tech-icon [label]="s.name" [size]="26"></app-tech-icon>
+        </span>
+        <div class="skill-info">
+          <h3>{{ s.name }}</h3>
+          <p>{{ s.sub }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

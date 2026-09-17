@@ -1,0 +1,167 @@
+.contact {
+  background: var(--bg-section);
+  border-top: 1px solid var(--border-soft);
+  padding-bottom: 0;
+}
+
+.contact-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(124, 77, 255, 0.14), rgba(77, 141, 255, 0.08));
+  border: 1px solid var(--border-glow);
+  overflow: hidden;
+}
+
+.contact-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(124, 77, 255, 0.3);
+  filter: blur(120px);
+  top: -100px;
+  right: -60px;
+  pointer-events: none;
+}
+
+.contact-left {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-sub {
+  color: var(--text-secondary);
+  font-size: 0.96rem;
+  margin-top: 12px;
+  max-width: 320px;
+}
+
+.contact-methods {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 14px;
+}
+
+.method {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  background: var(--method-bg);
+  border: 1px solid var(--border-soft);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.method:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-purple);
+}
+
+.method-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 12px;
+  background: var(--grad-primary);
+  color: #fff;
+}
+
+.method-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.method-info strong {
+  font-size: 0.92rem;
+  color: var(--text-primary);
+}
+
+.method-info span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  word-break: break-word;
+}
+
+.reach-note {
+  position: absolute;
+  right: 40px;
+  bottom: 14px;
+  font-family: "Caveat", cursive;
+  font-size: 1.2rem;
+  color: var(--accent-cyan);
+  transform: rotate(-6deg);
+  z-index: 2;
+}
+
+/* Footer */
+.footer {
+  margin-top: 70px;
+  border-top: 1px solid var(--border-soft);
+  padding: 22px 0;
+  background: var(--bg-deep);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social a {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-soft);
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.footer-social a:hover {
+  color: #fff;
+  border-color: var(--accent-purple);
+  background: rgba(124, 77, 255, 0.15);
+}
+
+@media (max-width: 800px) {
+  .contact-card {
+    grid-template-columns: 1fr;
+    padding: 30px 24px;
+  }
+  .reach-note {
+    display: none;
+  }
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Light theme: give method cards a soft shadow so the white surface
+   separates cleanly from the tinted contact card, and keep text crisp. */
+:host-context([data-theme="light"]) .method {
+  box-shadow: 0 6px 18px rgba(60, 68, 120, 0.12);
+}
+
+:host-context([data-theme="light"]) .method:hover {
+  box-shadow: 0 10px 24px rgba(124, 77, 255, 0.18);
+}
