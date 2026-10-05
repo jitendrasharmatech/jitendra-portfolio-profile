@@ -8,6 +8,7 @@ interface Experience {
   location: string;
   period: string;
   current?: boolean;
+  logo?: string;
   bullets: string[];
   tech: string[];
 }
@@ -27,6 +28,7 @@ export class ExperienceComponent {
       location: 'Gurugram, India',
       period: 'Jul 2021 - Present',
       current: true,
+      logo: 'assets/ericsson.svg',
       bullets: [
         'Led development and mentored the team on CCMS (CSS Compatibility Matrix Solution) using Java, Spring Boot and Angular 17, reducing operational costs by ~30%.',
         'Building SART (Security Assurance & Reporting Tool) with Java 17, Spring Boot, Angular 20, PostgreSQL, Spring Cloud Data Flow, Docker and Kubernetes.',
@@ -41,6 +43,7 @@ export class ExperienceComponent {
       company: 'SCNL (Satin Creditcare)',
       location: 'Gurugram, India',
       period: 'Jun 2019 - Jul 2021',
+      logo: 'assets/satin.jpg',
       bullets: [
         'Integrated web services for online/offline communication, improving system accessibility for 5,000+ field employees.',
         'Built core modules: Group Loan Application, Loan Card, PAR, Death Report and Cashbook.',
@@ -54,6 +57,7 @@ export class ExperienceComponent {
       company: 'PeopleStrong',
       location: 'Gurugram, India',
       period: 'May 2016 - Jun 2019',
+      logo: 'assets/peoplestrong.jpg',
       bullets: [
         'Developed core modules for ALTRecruit & ALTWorklife: Leave Management, Timesheet, Attendance, Payroll and Onboarding.',
         'Built a responsive Angular recruitment portal with applicant tracking and approval workflows.',
@@ -67,6 +71,7 @@ export class ExperienceComponent {
       company: 'Rhythmus Technology',
       location: 'Gurugram, India',
       period: 'Aug 2015 - May 2016',
+      logo: 'assets/rhythmus.jpg',
       bullets: [
         'Developed a scalable architecture for the DemoGo audio-conferencing software with scheduling and management features.',
         'Implemented core functionality using POJO classes across the Business and DAO layers.',

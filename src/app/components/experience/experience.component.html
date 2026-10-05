@@ -16,7 +16,10 @@
             <div class="exp-top">
               <div>
                 <h3>{{ e.role }}</h3>
-                <p class="exp-company">{{ e.company }} · {{ e.location }}</p>
+                <div class="exp-company-row">
+                  <img *ngIf="e.logo" [src]="e.logo" [alt]="e.company + ' logo'" class="exp-company-logo" />
+                  <p class="exp-company">{{ e.company }} · {{ e.location }}</p>
+                </div>
               </div>
               <span class="exp-period" [class.current]="e.current">{{ e.period }}</span>
             </div>
