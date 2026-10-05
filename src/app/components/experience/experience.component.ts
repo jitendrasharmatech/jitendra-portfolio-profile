@@ -112,7 +112,9 @@ export class ExperienceComponent {
   }
 
   awards = [
-    { icon: '🏆', title: 'Ericsson All Stars Award', sub: 'Cash bonus for outstanding CCMS performance' },
+    { icon: '🚀', title: 'Outstanding Performance - SART', sub: 'Awarded for excellence in SART project delivery and execution' },
+    { icon: '🏆', title: 'Ericsson All Stars Award', sub: 'CCMS performance award for outstanding contribution' },
+    { icon: '🌟', title: 'Outstanding Performance - POA', sub: 'Recognized for impactful POA delivery and process automation' },
     { icon: '🥇', title: 'Best Performance - AHM', sub: 'Cash prize at Annual Hackathon Meet' },
   ];
 
