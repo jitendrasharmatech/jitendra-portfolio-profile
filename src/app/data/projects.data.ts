@@ -19,8 +19,10 @@ export const PROJECTS: Project[] = [
     company: 'Ericsson, Gurugram',
     period: 'Mar 2026 - Present',
     description:
-      'A cloud-native platform that monitors and tracks Security Compliance across the entire project lifecycle - from pre-sales through deployment into customer environments. SART auto-syncs with Salesforce and Global Cronos to keep Opportunity Numbers and FAS IDs accurate, drives L-RA and SRM compliance activities, and connects development pipelines via the BCSS Pipeline to report compliance status in real time.',
+      'A cloud-native platform that monitors and tracks Security Compliance across the entire project lifecycle - from pre-sales through deployment into customer environments. I served as the primary point of contact between India and US teams, coordinating requirements, feedback, and delivery schedules while facilitating daily and weekly calls for issue resolution. SART auto-syncs with Salesforce and Global Cronos to keep Opportunity Numbers and FAS IDs accurate, drives L-RA and SRM compliance activities, and connects development pipelines via the BCSS Pipeline to report compliance status in real time.',
     highlights: [
+      'Primary point of contact between India and US teams, coordinating requirements, feedback, and delivery schedules for secure project execution',
+      'Facilitated daily and weekly stakeholder meetings to resolve blockers and keep delivery on track',
       'Architected an end-to-end Security Compliance platform covering pre-sales to customer deployment, cutting manual compliance-tracking effort by ~50%',
       'Built automated data sync with Salesforce, Global Cronos and SharePoint to keep Opportunity Numbers, FAS IDs and L-RA data continuously accurate',
       'Designed multi-repo handling so multiple GitLab repositories map under a single FAS ID, with drill-down vulnerability and scan dashboards',
@@ -75,8 +77,10 @@ export const PROJECTS: Project[] = [
     company: 'Ericsson, Gurugram',
     period: 'Jan 2023 - Feb 2026',
     description:
-      'Led development and team mentoring for CCMS, an enterprise compatibility and upgrade-path platform. Reduced operational costs by ~30% through automation and smart upgrade calculations.',
+      'Led development and team mentoring for CCMS, an enterprise compatibility and upgrade-path platform. I served as the primary point of contact between India and Poland teams, coordinating requirements, feedback, and delivery schedules while facilitating daily and weekly issue resolution. Reduced operational costs by ~30% through automation and smart upgrade calculations.',
     highlights: [
+      'Primary point of contact between India and Poland teams, coordinating requirements, feedback, and delivery schedules',
+      'Facilitated daily and weekly calls to track blockers and ensure timely issue resolution across teams',
       'Led development and mentored the team building CCMS with Java, Spring Boot and Angular 17',
       'Implemented dynamic upgrade-path calculations using graph algorithms (Dijkstra + DFS)',
       'Integrated EGAD authentication for secure enterprise login',
@@ -131,9 +135,11 @@ export const PROJECTS: Project[] = [
     company: 'PeopleStrong, Gurugram',
     period: 'May 2016 - Jun 2019',
     description:
-      'Developed core HR modules and a responsive recruitment portal for an enterprise HR product suite, simplifying HR workflows with intuitive interfaces.',
+      'Developed core HR modules and a responsive recruitment portal for an enterprise HR product suite, simplifying HR workflows with intuitive interfaces. Handled L2 support for production issues to ensure system stability and improved reusability through shared Angular components and services.',
     highlights: [
       'Built modules: Leave Management, Timesheet, Attendance, Payroll, Onboarding',
+      'Handled L2 production support for issue resolution and system stability',
+      'Improved reusability with shared Angular components and services',
       'Developed a responsive Angular recruitment portal with applicant tracking and approval workflows',
       'Applied Agile methodologies for scalable, high-quality delivery',
     ],
